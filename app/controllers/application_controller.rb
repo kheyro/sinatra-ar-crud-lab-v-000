@@ -17,7 +17,7 @@ class ApplicationController < Sinatra::Base
     post.content = params[:content]
     post.save
 
-    redirect '/posts/#{params[:id]}'
+    redirect to("/posts/#{params[:id]}")
   end
 
   get '/posts/:id/edit' do
