@@ -54,4 +54,11 @@ class ApplicationController < Sinatra::Base
 
   end
 
+
+  delete '/posts/:id/delete'
+    Post.delete(params[:id])
+
+    redirect "/delete"
+  end
+  
 end
