@@ -11,6 +11,10 @@ class ApplicationController < Sinatra::Base
 
   end
 
+  get '/new' do
+    erb :new
+  end
+
   patch '/posts/:id' do
     post = Post.find(params[:id])
     post.name = params[:name]
