@@ -20,8 +20,8 @@ class ApplicationController < Sinatra::Base
     @content = params[:content]
 
     new_post = Post.create(:name => @name, :content => @content)
-    @all_posts = Post.all
-    
+    @posts = Post.all
+
     erb :posts
 
   end
